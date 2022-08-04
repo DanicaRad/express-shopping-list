@@ -15,7 +15,7 @@ class Item {
     static find(name) {
         let foundItem = items.find(i => i.name === name);
         if(foundItem === undefined) {
-            throw {message: "Not Found", status: 400};
+            throw {message: "Not Found", status: 404};
         }
         return foundItem
     }
@@ -23,7 +23,7 @@ class Item {
     static update(name, data) {
         let foundItem = Item.find(name);
         if(foundItem === undefined) {
-            throw {message: "Not Found", status: 400}
+            throw {message: "Not Found", status: 404}
         }
         foundItem.name = data.name;
         foundItem.price = data.price;

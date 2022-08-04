@@ -1,5 +1,4 @@
 const express = require('express');
-// const middleware = require('./middleware');
 const itemsRoutes = require('./itemsRoutes');
 const ExpressError = require('./expressError');
 

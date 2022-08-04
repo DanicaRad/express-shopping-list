@@ -29,7 +29,7 @@ router.post('/', (req, res) => {
 router.patch('/:name', (req, res, next) => {
     try {
         let foundItem = Item.update(req.params.name, req.body);
-        return res.json({item: foundItem});
+        return res.json({"updated": foundItem});
     } catch(err) {
         return next(err);
     }
